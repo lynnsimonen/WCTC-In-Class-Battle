@@ -2,7 +2,7 @@ using System;
 
 namespace Battle.Models
 {
-    public class Fighter : ICombatant
+    public class Fighter : ICombatant, IMagicalCreature
     {
         public Fighter()
         {
@@ -14,6 +14,21 @@ namespace Battle.Models
         public string Name { get; set; }
         public Armor Armor { get; set; }
         public Weapon Weapon { get; set; }
+        
+
+        
+        public void Fly(IMagicalCreature fighter){
+            while (fighter.Name == "Flightmaker"){
+                Console.WriteLine($"See enemy before they arrive.  Use flight while you are Flightmaker");
+            }
+
+        }
+
+        public void Invisible(IMagicalCreature fighter){
+            System.Console.WriteLine("You are flying.");
+        }
+
+
 
         public void Attack(ICombatant enemy)
         {

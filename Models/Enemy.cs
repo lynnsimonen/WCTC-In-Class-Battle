@@ -21,5 +21,13 @@ namespace Battle.Models
         {
             throw new System.NotImplementedException();
         }
+
+        
+        public void Fly(IMagicalCreature fighter){
+            string magicDust = "shiek";
+
+            System.Console.WriteLine($"When you {magicDust} the fighters will be able to fly.");
+        }
+
     }
 }
